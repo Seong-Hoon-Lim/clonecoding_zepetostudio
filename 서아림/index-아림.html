@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEPETO Studio</title>
+
+    <style>
+
+        /* 초기화 */
+        body, h1, h2, h3, p, ul, ol, dl, div { margin: 0; padding: 0; }
+        body { width: 100%; height: 100vh; }
+        main { text-align: center; }
+        #video1, #image1, #content, #image2, #video2, #zepetoJoin 
+        { width: 100%; height: 80vh; position: relative; }
+        ul li, ul li dl, ol li { list-style: none; }
+        a { text-decoration: none; color: black; }
+        address { font-style: normal; }
+        .hidden { overflow: hidden; width: 1px; height: 1px;
+                margin: -1px; clip-path: polygon(0 0, 0 0, 0 0); }
+
+        /* 공통 폰트 */
+        .content-title { font-size: 56px; font-weight: bold; 
+                        line-height: 70px; }
+        .content-info { font-size: 22px; }
+
+        #video1 {width: 100%; height: 45vw; overflow: hidden; margin: 0px auto; position: relative;}
+        video { width: 100%; }
+        #video1::before { content: ""; position: absolute; top: 0; left: 0;
+                            width: 100%; height: 100%;
+                            background: rgba(0, 0, 0, 0.1);  }
+        #slogan { position: absolute; top: 50%; width: 100%; }
+        #slogan h2 { margin-top: -90px; text-align: center; font-size: 60px; color: #ffffff; }
+        #slogan a{  text-decoration: none; font-size:1rem; color: #5C46FF;
+                    background: #ffffff; padding:20px 20px 20px 20px; display:inline-block;
+                    border-radius: 40px; width:100px; margin:auto;
+                    display:block; text-align: center;
+                    }
+      
+        #image1 {margin: 100px 0 100px 0; position: relative;}
+        #image1 h2{text-align: center; font-size: 60px; color: #292930;}
+        #image1 p{margin: 20px 0 50px 0; text-align: center; font-size: 23px; color: #292930;}
+
+        #zepetoInfo{ margin: 0 100px; display: flex; justify-content: space-evenly;}
+        #zepetoInfo dt{font-size: 15px; text-align: center; font-weight:lighter; color: #292930;}
+        #zepetoInfo dd{order: 1; font-size: 30px; text-align: center; font-weight:bold; }
+
+
+
+ /* --------------------------------------------------------------------------------------------------------------- */
+
+
+        
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <header id="headerWrap">
+        <h1 id="logo"><a href="#">logo</a></h1>
+        <nav id="lnb"> 
+        <h2 class="hidden">관리메뉴</h2>
+            <ul id="lnbList">
+                <li><a href="#">콘텐츠관리</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </nav>
+            <nav id="gnb">
+            <h2 class="hidden">주요메뉴</h2>
+                <ul id="gnbList">
+                    <li><a href="#">콘텐츠</a>
+                        <ul>
+                            <li><a href="#">아이템</a></li>
+                            <li><a href="#">월드</a></li>
+                            <li><a href="#">라이브</a></li>
+                            <li><a href="#">빌드잇</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">크리에이터 프로그램</a></li>
+                    <li><a href="#">비지니스</a></li>
+                    <li><a href="#">가이드</a>
+                        <ul>
+                            <li><a href="#">가이드</a></li>
+                            <li><a href="#">학습</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">지원</a></li>
+                </ul>
+            </nav>
+            <!-- <nav id="mobileGnb">
+                <h2 class="hidden">모바일 메뉴</h2>
+                <ul>
+                    <li><a href="#">콘텐츠</a>
+                        <ul>
+                            <li><a href="#">아이템</a></li>
+                            <li><a href="#">월드</a></li>
+                            <li><a href="#">라이브</a></li>
+                            <li><a href="#">빌드잇</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">크리에이터 프로그램</a></li>
+                    <li><a href="#">비지니스</a></li>
+                    <li><a href="#">가이드</a>
+                        <ul>
+                            <li><a href="#">가이드</a></li>
+                            <li><a href="#">학습</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">지원</a></li>
+                </ul>
+                <dl>
+                  <dt>언어선택</dt>
+                  <dd>
+                    <ul>
+                      <li><a href="#">English</a></li>
+                      <li><a href="#">한국어</a></li>
+                      <li><a href="#">日本語</a></li>
+                      <li><a href="#">中文</a></li>
+                      <li><a href="#">ไทย</a></li>
+                      <li><a href="#">bahasa Indonesia</a></li>
+                      <li><a href="#">русский</a></li>
+                      <li><a href="#">italiano</a></li>
+                      <li><a href="#">Português</a></li>
+                      <li><a href="#">Español</a></li>             
+                    </ul>
+                  </dd>
+                </dl>
+            </nav> -->
+
+    </header>
+    <main>
+        <section id="video1">
+                <!-- 비디오1 -->
+                <video src="https://studio.zepeto.me/video/bg_home_video.mp4" width=100% 
+                    muted autoplay loop></video>
+            <div id="slogan">
+                <h2>상상하는 모든 것.<br>
+                    제페토 스튜디오에서.</h2>
+                <a href="#">시작하기</a>
+            </div>
+        </section>
+        <section id="image1">
+            <h2>크리에이터를 위한 제페토.</h2>
+            <p>제페토 크리에이터는 제페토 세상의 모든 것을 직접 만들 수 있습니다.<br>
+                전 세계 3억 유저에게 당신의 아이디어를 보여주세요!
+            </p>
+            <img src="./images/img_creators.png" alt="제페토 스튜디오 아바타" width="1200px" height="620px">
+            <div id="zepetoInfo">
+              <dl>
+                <dt>스튜디오 아이템 판매량</dt>
+                <dd>6800만</dd>
+              </dl>
+              <dl>
+                <dt>스튜디오 크리에이터 수</dt>
+                <dd>230만</dd>
+              </dl>
+              <dl>
+                <dt>제페토 가입자 수</dt>
+                <dd>3억</dd>
+              </dl>
+            </div>
+        </section>
+        <section id="content">
+          <h2 class="hidden">콘텐츠</h2>
+          <p>제페토 세상이 내 손안에.</p>
+          <p>아이템, 월드, 라이브까지.<br>
+          제페토는 크리에이터가 아이디어를 펼칠 수 있는 최고의 플랫폼입니다.</p>
+            <div id="platform">
+                <ul>
+                    <li>
+                        <h3>아이템</h3>
+                        <p>패션 아이템을 만들고 수익을 창출하세요.</p>
+                        <a href="#">더 알아보기</a>
+                    </li>
+                    <li>
+                        <h3>월드</h3>
+                        <p>제페토 세상에 내 아이디어가 담긴 월드를 만드세요.</p>
+                        <a href="#">더 알아보기</a>
+                    </li>
+                    <li>
+                        <h3>라이브</h3>
+                        <p>전 세계 유저들과 실시간 방송하세요.</p>
+                        <a href="#">더 알아보기</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="image2">
+            <h2>3 억 명을 사로잡을<br>
+                    크리에이터가 될 기회.</h2>
+            <p>230만이 넘는 제페토 크리에이터가 전 세계 3억 유저에게 아이디어를 선보이고 있습니다.<br>
+                    제페토의 대표 크리에이터를 바로 만나보세요.
+            </p>
+            <ul id="charName">
+                <li>
+                    <dl>
+                        <dt>Lenge</dt>
+                        <dd>@lenge</dd>
+                        <img src="/images/img_slider_01.png">
+                    </dl>
+                    <dl>
+                        <dt>아티 ARTY</dt>
+                        <dd>@arty_</dd>
+                        <img src="images/img_slider_02.png">
+                    </dl>
+                    <dl>
+                        <dt>하리</dt>
+                        <dd>@hari</dd>
+                        <img src="images/img_slider_03.png">
+                    </dl>
+                    <dl>
+                        <dt>CLOUD</dt>
+                        <dd>@cloud</dd>
+                        <img src="images/img_slider_04.png">
+                    </dl>
+                    <dl>
+                        <dt>코코</dt>
+                        <dd>@coco</dd>
+                        <img src="images/img_slider_05.png">
+                    </dl>
+                </li>
+            </ul>
+        </section>
+        <section id="video2">
+            <h2>크리에이터의 수익 창출은 기본.</h2>
+            <p>다양한 컨텐츠를 만들고 수익도 올려보세요.</p>
+            <video src="https://studio.zepeto.me/video/home_profit_video.mp4" width="640"
+                 muted autoplay loop></video>
+
+        </section>
+        <section id="zepetoJoin">
+            <h2>이제 나도 제페토 크리에이터.</h2>
+                <p>간단한 3가지 과정만 거치면 제페토 크리에이터가 될 수 있습니다.<br>
+                궁금한 점이 있다면 사이트 상단 [지원]을 통해 문의해 주세요.
+                </p>
+            <a href="#">시작하기</a>
+            <div id="zepetoJoinList">
+                <ol>
+                    <li>
+                        <h3>제페토 스튜디오 가입하기</h3>
+                        <p>제페토 계정만 있다면 누구나
+                            무료로 가입할 수 있습니다.  </p>
+                        <span>></span>
+
+                    </li>
+                    <li>
+                        <h3>콘텐츠 제작</h3>
+                        <p>제작에 필요한 모든 가이드를
+                        제공합니다. 지금 바로 시작하세요. </p>
+                        <span>></span>
+                    </li>
+                    <li>
+                        <h3>콘텐츠 심사</h3>
+                        <p>제페토 유저들이 안전하고 즐겁게 즐길 수 있도록 심사를 거친 후 공개됩니다.
+                            바로 시작하세요.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="footerList">
+            <ul>
+                <li>제품
+                    <ul>
+                        <li><a href="#">ZEPETO</a></li>
+                        <li><a href="#">ZEPETO Studio</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NAVER Z</a>
+                    <ul>
+                        <li><a href="#">뉴스</a></li>
+                        <li><a href="#">한국 채용</a></li>
+                        <li><a href="#">미국 채용</a></li>
+                        <li><a href="#">제휴 제안</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#">지원</a>
+                    <ul>
+                        <li><a href="#">공지</a></li>
+                        <li><a href="#">결제</a></li>
+                        <li><a href="#">계정-안전</a></li>
+                        <li><a href="#">문의</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">커뮤니티</a>
+                    <ul>
+                        <li><a href="#">안전센터</a></li>
+                        <li><a href="#">가이드라인</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li><a href="#">Google<br>Play</a></li>
+                <li><a href="#">App Store</a></li>
+            </ul>
+        </div>
+        <div id="footerInfo">
+            <small>© NAVER Z Corp. All rights reserved.</small>
+            <ul id="">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">문의하기</a></li>
+                <li><a href="#">Credits</a></li>
+            </ul>
+            <dl>
+                <dt>언어선택</dt>
+                <dd>
+                  <ul>
+                    <li><a href="#">English</a></li>
+                      <li><a href="#">한국어</a></li>
+                      <li><a href="#">日本語</a></li>
+                      <li><a href="#">中文</a></li>
+                      <li><a href="#">ไทย</a></li>
+                      <li><a href="#">bahasa Indonesia</a></li>
+                      <li><a href="#">русский</a></li>
+                      <li><a href="#">italiano</a></li>
+                      <li><a href="#">Português</a></li>
+                      <li><a href="#">Español</a></li> 
+                  </ul>
+                </dd>
+              </dl>
+            <a href="#">인스타그램</a>
+            <a href="#">트위터</a>
+            <a href="#">유튜브</a>
+            <a href="#">틱톡</a>
+        </div>
+        <a href="#" id="App">모바일 앱에서 제페토 즐기기</a>
+    </footer>
+</body>
+</html>

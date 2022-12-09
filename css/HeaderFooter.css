@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* 헤더 */
+#headerWrap{ background: #000; 
+    height: 80px;
+    display:flex; 
+    justify-content: center;
+    align-items: center;    
+    }
+#logo{ width: 150px; height: 20px;
+background: url(../images/logo_zepeto_white.png) no-repeat center/ cover;    
+position: absolute; left: 40px; top: 30px;
+}
+#logo a{ color:rgba(255, 255, 255, 0); font-size: 40px;}
+/* lnb */
+#lnb{ position: absolute; right: 80px; 
+}
+#lnbList{display: flex;}
+#lnbList .con {width: 120px; height: 40px; 
+       border: 2px solid#fff;
+      border-radius: 5px;
+   }
+#lnbList .con a{text-align: center; font-size: 15px; line-height: 30px;}           
+#lnbList > li > a {color:#fff; padding-left: 20px;}
+#lnbList .noti a {line-height: 30px; color:rgba(255, 255, 255, 0);}
+
+
+/* gnb */
+#gnb{}
+#gnbList{display: flex; 
+position: absolute; left:250px; top: 25px;
+justify-content: space-evenly;
+ align-items: center; }
+#gnbList > li > a{color:rgba(255, 255, 255, 0.6); font-size: 17px; font-weight: 500;
+            line-height: 30px; padding-right: 20px;}
+#gnbList > li > ul{position: absolute; display: none; padding: 20px 0;}
+/* gnb hover */
+#gnbList > li > a:hover{color:#fff;}
+
+/* sub */
+#headerWrap:hover .sub > li > a{color:#000;}
+.sub {position: absolute; 
+display: none;  
+width: 200px; 
+border:1px solid#000;
+border-radius:20px;
+background: #fff;}
+.sub > li {font-size: 17px; 
+    font-weight: 450;
+    color:#000;
+    background: #fff;
+    text-align: left; line-height: 50px; }
+#gnbList > li:hover ul{color:#fff; display: block;}
+#gnbList > li:hover ul a:hover{color:#3c1bb4;}
