@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* 헤더 */
 #headerWrap{ background: #000; 
     height: 80px;
@@ -11,6 +12,7 @@ background: url(../images/logo_zepeto_white.png) no-repeat center/ cover;
 position: absolute; left: 40px; top: 30px;
 }
 #logo a{ color:rgba(255, 255, 255, 0); font-size: 40px;}
+
 /* lnb */
 #lnb{ position: absolute; right: 80px; 
 }
@@ -33,21 +35,82 @@ justify-content: space-evenly;
 #gnbList > li > a{color:rgba(255, 255, 255, 0.6); font-size: 17px; font-weight: 500;
             line-height: 30px; padding-right: 20px;}
 #gnbList > li > ul{position: absolute; display: none; padding: 20px 0;}
+
 /* gnb hover */
 #gnbList > li > a:hover{color:#fff;}
 
 /* sub */
-#headerWrap:hover .sub > li > a{color:#000;}
-.sub {position: absolute; 
-display: none;  
-width: 200px; 
-border:1px solid#000;
-border-radius:20px;
-background: #fff;}
+#headerWrap:hover .sub > li > a{color:#000;
+}
+#headerWrap:hover::after.sub >li >a{background: #fff;}
+.sub {
+    position: absolute; 
+    display: none;  
+    width: 200px; 
+    border:1px solid#000;
+    background: #fff;
+    border-radius:20px;
+    z-index: 999;
+}
 .sub > li {font-size: 17px; 
     font-weight: 450;
     color:#000;
-    background: #fff;
-    text-align: left; line-height: 50px; }
+    text-align: left; line-height: 45px;    
+    text-indent:15%;
+}
+.sub #item{background: url(../images/ic1.svg) no-repeat #fff; }
+.sub #world {background: url(../images/ic2.svg) no-repeat #fff; }
+.sub #live {background: url(../images/ic3.svg) no-repeat #fff ;}
+.sub #it{background: url(../images/ic4.svg) no-repeat #fff;}
+.sub #guide{background: url(../images/ic5.svg) no-repeat #fff;}
+.sub #learn{background: url(../images/ic6.svg) no-repeat #fff;}
+
+
 #gnbList > li:hover ul{color:#fff; display: block;}
 #gnbList > li:hover ul a:hover{color:#3c1bb4;}
+
+/* 푸터 */
+
+#footerWrap { position: relative; }
+#footerList{ 
+    height:200px;
+    border-top:1px solid rgba(8, 8, 8, 0.6);
+    }
+ 
+#footerList > ul{ display:flex; position: absolute; left:150px; padding:30px;
+    } 
+#footerList > ul > li {font-size: 13px; 
+    text-align: center;
+    margin-right: 50px;
+    }
+  
+#storeMenu{display: flex; 
+    justify-content: right;
+    position: relative;
+    bottom: 150px;
+}
+#footerWrap > #google{width: 150px; height: 40px; 
+    border:1px solid#000 ;
+    border-radius: 10px;
+    text-indent: 20%;
+    background:
+    url(../images/googleplay.svg) no-repeat #e6e3e0;
+    margin-right:10px;
+    z-index: 999;
+    }
+
+#footerWrap > #apple{
+    width: 150px; height: 40px; 
+    border:1px solid#000 ;
+    border-radius: 10px;
+    text-indent: 20%;
+    background:
+    url(../images/appstore.svg) no-repeat #e5e3e1;
+    z-index: 999;
+    }
+
+#footerInfo{ height: 80px;
+    border-top: 1px solid#000;
+    display:flex;}
+#sns{display: flex;}
+#App{display: none;}

@@ -2,11 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 /* 초기화 */
+#headerWrap, #image1, #content, #image2, #video2, #zepetoJoin 
+{ box-sizing: border-box; }
 body, h1, h2, h3, p, ul, ol, dl, div { margin: 0; padding: 0; }
-body { width: 100%; height: 100vh; position: relative;}
+body 
+{ 
+    width: 100%; height: 100vh; 
+    /* position: relative; */
+}
 main { text-align: center; }
 #video1, #image1, #content, #image2, #video2, #zepetoJoin 
-{ width: 100%; height: 80vh; position: relative; }
+{ 
+    width: 100%; height: 100vh; 
+    position: relative;
+ }
 ul li, ul li dl, ol li { list-style: none; }
 a { text-decoration: none; color: black; }
 address { font-style: normal; }
