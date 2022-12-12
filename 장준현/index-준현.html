@@ -22,33 +22,43 @@
 
     /* section 5 */
 
-    #video2 {width: 100%;  margin: 0px auto; position: relative; overflow: hidden;
+    #video2 {width: 100%;  margin: 0 auto; padding: 0; position: relative; overflow: hidden;
+        background-color: #f8f8fa;
             }
+            
         #video2 h2{font-size:56px ; 
                     position: relative; top: 50px;  text-align: center; width: 100%;
-                    }
-        #video2 p{ font-size: 22px; position: relative; top: 75px; text-align: center; width: 100%;}
-        video { width: 100%; height: 100%; position:relative ; margin-top: 80px;}
+                    background-color: #f8f8fa;}
+        #video2 p{ font-size: 22px; position: relative; top: 75px; text-align: center; width: 100%;background-color: #f8f8fa;}
+        #video2 div{max-width: 1128px; margin: 0 auto;}
+        video { width: 100%; height: 80vh; position:relative ; margin-top: 80px; -webkit-mask-image: -webkit-radial-gradient(white, black);}
         #video2::before { content: ""; position: absolute; top: 0; left: 0;
                             width: 100%; height: 100%;
-                            background: rgba(0, 0, 0, 0.1);  }
+                            background: rgba(f8,f8,f8,0.1);  }
 
     /* section6 */
-     #zepetoJoin{width: 100%; margin: 0 auto; overflow: hidden; }
+     #zepetoJoin{ width: 100%; margin: 0 auto; overflow: hidden; padding-bottom: 200px;}
      #zepetoJoin h2{font-size: 56px; padding-top: 100px; text-align: center;}
-     #zepetoJoin p{font-size: 22px; padding-top: 10px;  padding-bottom: 50px;
+     #zepetoJoin p{font-size: 22px; padding-top: 10px; 
                 text-align: center;}
-     #zepetoJoin a{text-decoration: none; font-size :15px; color: #fff;
-                    background: #4f08d3; padding:20px 20px 20px 20px; display:inline-block;
-                    border-radius: 40px; width:100px;  margin:auto;
-                    display:block; text-align: center;}
-     #zepetoJoinList{ width: 80%;  margin: 50px auto; display: flex; justify-content: space-between; background-color: aliceblue;
+     #zepetoJoin a{ display: inline-block; font-size :20px; color: #fff;  font-weight: 500;
+                    background: #5c46ff; padding:0 34px; 
+                    border-radius: 28px; height: 56px;  margin-top:40px; margin-left: 45%; line-height: 56px;
                     text-align: center;}
-     #zepetoJoinList ol{ padding-top: 100px;  }
-     #zepetoJoinList ol li{ display:inline-block; margin: 0 auto;  vertical-align: top; 
-        width: calc(30% - 55px);}
-        #zepetoJoinList h3{font-size: 25px;}
-        #zepetoJoinList p{font-size: 16px;}
+
+
+     #zepetoJoinList{max-width: 1184px; margin:80px auto 0;  background-color: #f8f8fa; border-radius: 16px; 
+                           text-align: center; }
+     #zepetoJoinList ol{ display: flex; padding: 56px 48px;}
+     #zepetoJoinList ol li{ position: relative; display:inline-block; margin: 0 auto;  vertical-align: top; 
+        
+        width: calc(33% - 55px);}
+        .number{display: inline-block; font-size: 22px; font-weight: 700;height: 40px;width: 40px;
+                line-height: 38px; background-color: #F0F0F0; border-radius: 50%; text-align: center;}
+        #zepetoJoinList ol li h3{ margin-top: 22px; font-size: 22px;}
+        #zepetoJoinList ol li p{ font-size: 17px;}
+        .right{display: block; position: absolute; width: 28px;height: 28px;top: 100px; left: -45px;}
+
 
     
         
@@ -225,12 +235,13 @@
                 </li>
             </ul>
         </section>
-        <section id="video2">
+        <section id="video2">         
             <h2>크리에이터의 수익 창출은 기본.</h2>
             <p>다양한 컨텐츠를 만들고 수익도 올려보세요.</p>
+            <div>
             <video src="https://studio.zepeto.me/video/home_profit_video.mp4" width="640"
                  muted autoplay loop></video>
-
+                </div>
         </section>
         <section id="zepetoJoin">
             <h2>이제 나도 제페토 크리에이터.</h2>
@@ -241,19 +252,33 @@
             <div id="zepetoJoinList">
                 <ol>
                     <li>
+                        <span class="number">1</span>
+                        
+
                         <h3>제페토 스튜디오 가입하기</h3>
                         <p>제페토 계정만 있다면 누구나
-                            무료로 가입할 수 있습니다.  </p>
-                        <span>></span>
-
+                            무료로 가입할 수 있습니다.</p>
                     </li>
                     <li>
+                        <span class="right"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.31278 23.375L18.6875 13.9999L9.31269 4.62511" 
+                            stroke="#C7C7C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            <path d="M9.31278 23.375L18.6875 13.9999L9.31269 4.62511"
+                         stroke="#C7C7C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></span>
+                        
+                        <span class="number">2</span>
                         <h3>콘텐츠 제작</h3>
                         <p>제작에 필요한 모든 가이드를
                         제공합니다. 지금 바로 시작하세요. </p>
-                        <span>></span>
+                       
                     </li>
                     <li>
+                        <span class="right"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.31278 23.375L18.6875 13.9999L9.31269 4.62511" 
+                            stroke="#C7C7C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </span>
+                        
+                        <span class="number">3</span>
                         <h3>콘텐츠 심사</h3>
                         <p>제페토 유저들이 안전하고 즐겁게 즐길 수 있도록 심사를 거친 후 공개됩니다.
                             바로 시작하세요.</p>
