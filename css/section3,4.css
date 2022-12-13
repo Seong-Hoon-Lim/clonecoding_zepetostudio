@@ -1,27 +1,39 @@
 @charset "utf-8";
 /* content */
 #content 
-{ 
-    width: 100%; background: #f3f3f3;
-    display: flex; flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* vertical-align: middle; */
-    
+{   
+    background: #f3f3f3;     
  }
-#content > #contentText
-{ margin-top: -15%; }
+#content .content-title
+{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: bold;
+}
+#content .content-info
+{
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 25px;
+}
+#contentText
+{ 
+    padding: 120px 50px;    
+}
 
 /* platform */
-#content > #platform
+#platform
 { 
-    margin: 0 auto; margin-top: 300px;
-    /* position: relative; */
+    padding: 120px 50px;
+    margin: 0 auto;     
     max-width: 1440px;
-    box-sizing: border-box;
- }
+    box-sizing: border-box;    
+}
+
 #platform ul
-{ margin-top: -48%; }
+{ 
+    margin-top: -8%;
+}
 
 #platform .platform-icon
  {
@@ -37,19 +49,19 @@
 { 
     position: relative;
     display: inline-block;
-    padding: 40px 30px;
-    width: 33%; height: 420px; max-width: 320px;    
+    padding: 40px 30px 30px;
+    width: calc(33.333% - 36px); height: 420px; max-width: 320px;    
     background-color: #fff;
     vertical-align: middle;
     font-size: 17px;
     box-sizing: border-box;
     border-radius: 15px;
  }
+ 
 #platform .platform-item:nth-child(2),
 #platform .platform-item:nth-child(3)
 { margin-left: 35px; }
-#platform .platform-text
-{  }
+
 #platform .platform-btn
 { 
     position: absolute; right: 60px; bottom: 30px; left: 60px;
@@ -61,24 +73,51 @@
 }
 
 /* image2 */
-#image2 
+#image2
 { 
-    display: block;
-    text-align: center;
+    margin: 0 auto;
+    width: 100%; height: 100vh;      
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     position: relative;    
-    width: 100%; height: 100%;      
  }
-#image2 .charName
+#image2 .content-title
+{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: bold;
+}
+#image2 .content-info
+{
+    
+    margin-top: 30px;
+    line-height: 30px;
+    font-size: 25px;
+}
+
+#image2Text 
+{
+    padding: 120px 50px;  
+}
+
+#image2 #charName
 { 
-    position: relative;    
+    
+    width: 100%;
+    margin-top: 500px;     
+    position: absolute;
+    display: flex; flex-direction: column;
+         
     
  }
 .charProfile
 { 
     position: relative; display: inline-block;
     width: 320px; height: 420px;
-    border: 1px solid #000;
+    margin-left: 35px;
+    /* border: 1px solid #000; */
+
  }
  .charProfile img 
  { 
@@ -86,3 +125,85 @@
     position: relative;
 
 }
+
+.charProfile dt 
+{ 
+    display: block;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px
+ }
+
+ .charProfile dd
+{ 
+    display: block;
+    margin-top: 4px;
+    font-size: 17px;
+    line-height: 24px;
+    color: #5c5c61;
+ }
+
+ /* 1024px 미만 */
+ @media (max-width: 1023px) 
+ {
+    /* content */
+    #platform
+    {
+        position: relative;
+        display: block;
+        text-align: left;        
+        
+    }
+    #platform .platform-item
+    { 
+        display: flex;
+        align-items: center;       
+        padding: 52px 104px 52px 156px;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+    #platform .platform-item:nth-child(2),
+    #platform .platform-item:nth-child(3)
+    { 
+        margin-top: 40px;
+        margin-left: 0px;
+     }
+
+    #platform .platform-icon
+    { 
+        margin-left: -100px; margin-right: 30px;
+        margin-top: 40px;
+        width: 100px; height: 100px;
+        padding-bottom: 30px;
+        background: 100px 100px; background-repeat: no-repeat;
+        
+     }
+    #platform h3 { font-size: 28px; line-height: 50px; }
+
+    #platform .platform-btn
+    { height: 0; width: 0; }
+
+
+    /* image2 */
+    #image2 
+    {
+        margin: 0 auto;
+        width: 100%;     
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        overflow: hidden;
+        position: relative; 
+    }
+
+    #image2 #charName
+    { 
+        width: 100%;
+        margin-top: 500px;     
+        position: absolute;
+        
+        
+     }
+   
+ }

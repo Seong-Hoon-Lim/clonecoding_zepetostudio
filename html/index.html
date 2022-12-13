@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="../css/section3,4.css">
     <!-- section 5,6 -->
     <link rel="stylesheet" href="../css/section5,6.css">
-    <!-- footer -->
     
 </head>
 <body>
@@ -32,7 +31,7 @@
             <h2 class="hidden">주요메뉴</h2>
                 <ul id="gnbList">
                     <li><a href="#">콘텐츠</a>
-                        <ul class="sub">
+                        <ul class="sub" id="sub1">
                             <li id="item"><a href="#">아이템</a></li>
                             <li id="world"><a href="#">월드</a></li>
                             <li id="live"><a href="#">라이브</a></li>
@@ -42,7 +41,7 @@
                     <li><a href="#">크리에이터 프로그램</a></li>
                     <li><a href="#">비지니스</a></li>
                     <li><a href="#">가이드</a>
-                        <ul class="sub">
+                        <ul class="sub" id="sub2">
                             <li id="guide"><a href="#">가이드</a></li>
                             <li id="learn"><a href="#">학습</a></li>
                         </ul>
@@ -51,8 +50,9 @@
                 </ul>
             </nav>
             <!-- <nav id="mobileGnb">
+                <div id="sidebutton"></div>
                 <h2 class="hidden">모바일 메뉴</h2>
-                <ul>
+                <ul class="sidemenu">
                     <li><a href="#">콘텐츠</a>
                         <ul>
                             <li><a href="#">아이템</a></li>
@@ -94,8 +94,8 @@
     <main>
         <section id="video1">
                 <!-- 비디오1 -->
-                <video src="https://studio.zepeto.me/video/bg_home_video.mp4" width=100% 
-                    muted autoplay loop></video>
+                <video src="https://studio.zepeto.me/video/bg_home_video.mp4" width="100%"
+                muted autoplay loop></video>
             <div id="slogan">
                 <h2>상상하는 모든 것.<br>
                     제페토 스튜디오에서.</h2>
@@ -137,35 +137,43 @@
                         <span class="platform-icon">
                             <img src="../images/platform_item_ic.svg" alt="아이템 아이콘">
                         </span>
-                        <h3>아이템</h3>
-                        <p class="platform-text">패션 아이템을 만들고<br> 수익을 창출하세요.</p>
+                        <div class="platform-item-inner">
+                            <h3>아이템</h3>
+                            <p class="platform-text">패션 아이템을 만들고<br> 수익을 창출하세요.</p>
+                        </div>
                         <a href="#" class="platform-btn">더 알아보기</a>
                     </li>
                     <li class="platform-item">
                         <span class="platform-icon">
                             <img src="../images/platform_world_ic.svg" alt="월드 아이콘">
                         </span>
-                        <h3>월드</h3>
-                        <p class="platform-text">제페토 세상에<br> 내 아이디어가 담긴<br> 월드를 만드세요.</p>
+                        <div class="platform-item-inner">
+                            <h3>월드</h3>
+                            <p class="platform-text">제페토 세상에<br> 내 아이디어가 담긴<br> 월드를 만드세요.</p>
+                        </div>
                         <a href="#" class="platform-btn">더 알아보기</a>
                     </li>
                     <li class="platform-item">
                         <span class="platform-icon">
                             <img src="../images/platform_live_ic.svg" alt="라이브 아이콘">
                         </span>
-                        <h3>라이브</h3>
-                        <p class="platform-text">전 세계 유저들과<br> 실시간 방송하세요.</p>
+                        <div class="platform-item-inner">
+                            <h3>라이브</h3>
+                            <p class="platform-text">전 세계 유저들과<br> 실시간 방송하세요.</p>
+                        </div>
                         <a href="#" class="platform-btn">더 알아보기</a>
                     </li>
                 </ul>
             </div>
         </section>
         <section id="image2">
+            <div id="image2Text">
             <h2 class="content-title">3 억 명을 사로잡을<br>
                     크리에이터가 될 기회.</h2>
             <p class="content-info">230만이 넘는 제페토 크리에이터가 전 세계 3억 유저에게 아이디어를 선보이고 있습니다.<br>
                     제페토의 대표 크리에이터를 바로 만나보세요.
             </p>
+            </div>
             <ul id="charName">
                 <li>
                     <dl class="charProfile">
@@ -212,19 +220,32 @@
             <div id="zepetoJoinList">
                 <ol>
                     <li>
+                        <span class="number">1</span>
                         <h3>제페토 스튜디오 가입하기</h3>
                         <p>제페토 계정만 있다면 누구나
                             무료로 가입할 수 있습니다.  </p>
-                        <span>></span>
 
                     </li>
                     <li>
+                        <span class="right"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.31278 23.375L18.6875 13.9999L9.31269 4.62511" 
+                            stroke="#C7C7C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                            <path d="M9.31278 23.375L18.6875 13.9999L9.31269 4.62511"
+                         stroke="#C7C7C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></span>
+                        
+                        <span class="number">2</span>
                         <h3>콘텐츠 제작</h3>
                         <p>제작에 필요한 모든 가이드를
                         제공합니다. 지금 바로 시작하세요. </p>
-                        <span>></span>
+                        
                     </li>
                     <li>
+                        <span class="right"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.31278 23.375L18.6875 13.9999L9.31269 4.62511" 
+                            stroke="#C7C7C9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </span>
+                        
+                        <span class="number">3</span>
                         <h3>콘텐츠 심사</h3>
                         <p>제페토 유저들이 안전하고 즐겁게 즐길 수 있도록 심사를 거친 후 공개됩니다.
                             바로 시작하세요.</p>
@@ -266,21 +287,23 @@
                     </ul>
                 </li>
             </ul>
-            <ul id="storeMenu">
-                <li id="google"><a href="#">Google<br>Play</a></li>
+        </div>
+        <div>
+            <ul id="storemenu">
+                <li id="google"><a href="#">GooglePlay</a></li>
                 <li id="apple"><a href="#">App Store</a></li>
             </ul>
         </div>
         <div id="footerInfo">
             <small>© NAVER Z Corp. All rights reserved.</small>
-            <ul id="">
+            <ul class="info">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
                 <li><a href="#">문의하기</a></li>
                 <li><a href="#">Credits</a></li>
             </ul>
-            <dl>
-                <dt>언어선택</dt>
+            <dl id="lag">
+                <dt class="hidden">언어선택</dt>
                 <dd>
                   <ul>
                     <li><a href="#">English</a></li>
@@ -296,12 +319,14 @@
                   </ul>
                 </dd>
               </dl>
-            <a href="#">인스타그램</a>
-            <a href="#">트위터</a>
-            <a href="#">유튜브</a>
-            <a href="#">틱톡</a>
+              <div id="sns">
+                <a href="#" id="ins">인스타그램</a>
+                <a href="#" id="twitt">트위터</a>
+                <a href="#" id="you">유튜브</a>
+                <a href="#" id="tic">틱톡</a>
+            </div>
         </div>
-        <a href="#" id="app">모바일 앱에서 제페토 즐기기</a>
+        <a href="#" id="App">모바일 앱에서 제페토 즐기기</a>
     </footer>
 </body>
 </html>

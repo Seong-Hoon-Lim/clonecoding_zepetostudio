@@ -97,7 +97,7 @@
             <h2 class="hidden">주요메뉴</h2>
                 <ul id="gnbList">
                     <li><a href="#">콘텐츠</a>
-                        <ul class="sub">
+                        <ul class="sub" id="sub1">
                             <li id="item"><a href="#">아이템</a></li>
                             <li id="world"><a href="#">월드</a></li>
                             <li id="live"><a href="#">라이브</a></li>
@@ -107,7 +107,7 @@
                     <li><a href="#">크리에이터 프로그램</a></li>
                     <li><a href="#">비지니스</a></li>
                     <li><a href="#">가이드</a>
-                        <ul class="sub">
+                        <ul class="sub" id="sub2">
                             <li id="guide"><a href="#">가이드</a></li>
                             <li id="learn"><a href="#">학습</a></li>
                         </ul>
@@ -115,9 +115,10 @@
                     <li><a href="#">지원</a></li>
                 </ul>
             </nav>
-            <!-- <nav id="mobileGnb">
-                <h2>모바일 주요메뉴</h2>
-                <ul>
+            <nav id="mobileGnb">
+                <div id="sidebutton"></div>
+                <h2 class="hidden">모바일 주요메뉴</h2>
+                <ul class="sidemenu">
                     <li><a href="#">콘텐츠</a>
                         <ul>
                             <li><a href="#">아이템</a></li>
@@ -153,7 +154,7 @@
                     </ul>
                   </dd>
                 </dl>
-            </nav> -->
+            </nav>
 
     </header>
     <main>
@@ -327,14 +328,14 @@
         </div>
         <div id="footerInfo">
             <small>© NAVER Z Corp. All rights reserved.</small>
-            <ul>
+            <ul class="info">
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보처리방침</a></li>
                 <li><a href="#">문의하기</a></li>
                 <li><a href="#">Credits</a></li>
             </ul>
-            <dl>
-                <dt>언어선택</dt>
+            <dl id="lag">
+                <dt class="hidden">언어선택</dt>
                 <dd>
                   <ul>
                     <li>English</li>
@@ -349,11 +350,13 @@
                     <li>Español</li>
                   </ul>
                 </dd>
-              </dl>
-            <a href="#">인스타그램</a>
-            <a href="#">트위터</a>
-            <a href="#">유튜브</a>
-            <a href="#">틱톡</a>
+            </dl>
+              <div id="sns">
+                <a href="#" id="ins">인스타그램</a>
+                <a href="#" id="twitt">트위터</a>
+                <a href="#" id="you">유튜브</a>
+                <a href="#" id="tic">틱톡</a>
+              </div>    
         </div>
         <a href="#" id="App">모바일 앱에서 제페토 즐기기</a>
     </footer>

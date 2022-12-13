@@ -1,20 +1,19 @@
-@charset "utf-8";
-
+@charset "utf-8"; 
 /* 헤더 */
-#headerWrap{ background: #000; 
+#headerWrap{ 
+    background: #000; 
     height: 80px;
     display:flex; 
     justify-content: center;
     align-items: center;    
     }
 #logo{ width: 150px; height: 20px;
-background: url(../images/logo_zepeto_white.png) no-repeat center/ cover;    
+background: url(../images/logo.png) no-repeat center/ cover;    
 position: absolute; left: 40px; top: 30px;
 }
 #logo a{ color:rgba(255, 255, 255, 0); font-size: 40px;}
-
 /* lnb */
-#lnb{ position: absolute; right: 80px; 
+#lnb{ position: absolute; right: 12px; 
 }
 #lnbList{display: flex;}
 #lnbList .con {width: 120px; height: 40px; 
@@ -23,19 +22,24 @@ position: absolute; left: 40px; top: 30px;
    }
 #lnbList .con a{text-align: center; font-size: 15px; line-height: 30px;}           
 #lnbList > li > a {color:#fff; padding-left: 20px;}
-#lnbList .noti a {line-height: 30px; color:rgba(255, 255, 255, 0);}
+#lnbList .noti a {
+    line-height: 40px; color:rgba(255, 255, 255, 0);}
 
-
+#lnbList .noti{
+    background: url(../images/-bell.png) no-repeat center;}
 /* gnb */
 #gnb{}
 #gnbList{display: flex; 
-position: absolute; left:250px; top: 25px;
+position: absolute; left:280px; top: 25px;
 justify-content: space-evenly;
  align-items: center; }
-#gnbList > li > a{color:rgba(255, 255, 255, 0.6); font-size: 17px; font-weight: 500;
-            line-height: 30px; padding-right: 20px;}
+#gnbList > li > a{
+    color:rgba(255, 255, 255, 0.6); 
+    font-size: 17px; 
+    font-weight: 500;
+    line-height: 30px; 
+    padding-right: 20px;}
 #gnbList > li > ul{position: absolute; display: none; padding: 20px 0;}
-
 /* gnb hover */
 #gnbList > li > a:hover{color:#fff;}
 
@@ -44,73 +48,150 @@ justify-content: space-evenly;
 }
 #headerWrap:hover::after.sub >li >a{background: #fff;}
 .sub {
-    position: absolute; 
-    display: none;  
-    width: 200px; 
-    border:1px solid#000;
-    background: #fff;
-    border-radius:20px;
-    z-index: 999;
+display: none;  
+width: 250px; 
+background: #fff;
+border-radius:20px;
+z-index: 999;
 }
-.sub > li {font-size: 17px; 
+#sub1{
+}
+#sub2{}
+.sub > li {
+    display: block;
+    font-size: 17px; 
     font-weight: 450;
     color:#000;
-    text-align: left; line-height: 45px;    
+    text-align: left; line-height: 30px;    
     text-indent:15%;
+    margin-bottom: 25px;
+    margin-left: 20px;
 }
-.sub #item{background: url(../images/ic1.svg) no-repeat #fff; }
-.sub #world {background: url(../images/ic2.svg) no-repeat #fff; }
-.sub #live {background: url(../images/ic3.svg) no-repeat #fff ;}
-.sub #it{background: url(../images/ic4.svg) no-repeat #fff;}
-.sub #guide{background: url(../images/ic5.svg) no-repeat #fff;}
-.sub #learn{background: url(../images/ic6.svg) no-repeat #fff;}
+
+.sub #item{background: url(../images/ic1.svg) no-repeat; }
+.sub #world {background: url(../images/ic2.svg) no-repeat; }
+.sub #live {background: url(../images/ic3.svg) no-repeat; }
+.sub #it{background: url(../images/ic4.svg) no-repeat;}
+.sub #guide{background: url(../images/ic5.svg) no-repeat;}
+.sub #learn{background: url(../images/ic6.svg) no-repeat ;}
 
 
 #gnbList > li:hover ul{color:#fff; display: block;}
 #gnbList > li:hover ul a:hover{color:#3c1bb4;}
 
 /* 푸터 */
-
-#footerWrap { position: relative; }
 #footerList{ 
     height:200px;
-    border-top:1px solid rgba(8, 8, 8, 0.6);
+    border-top:1px solid #f7eeee;
     }
  
 #footerList > ul{ display:flex; position: absolute; left:150px; padding:30px;
     } 
-#footerList > ul > li {font-size: 13px; 
-    text-align: center;
+#footerList > ul > li {
+    font-size: 13px; 
+    text-align: left;
+    line-height: 30px;
     margin-right: 50px;
     }
-  
-#storeMenu{display: flex; 
+/* .fl {font-weight: 1000;} */
+
+#storemenu{display: flex; 
     justify-content: right;
     position: relative;
-    bottom: 150px;
+    bottom: 160px;
+    right: 100px;
 }
-#footerWrap > #google{width: 150px; height: 40px; 
-    border:1px solid#000 ;
+#google{width: 120px; height: 40px; 
     border-radius: 10px;
-    text-indent: 20%;
+    text-indent: 25%;
     background:
-    url(../images/googleplay.svg) no-repeat #e6e3e0;
+    url(../images/googleplay.svg) no-repeat 7px #e4e1e199;
     margin-right:10px;
-    z-index: 999;
+    font-size: 12px;
+    font-weight: 1000;    
+    line-height: 40px;
     }
 
-#footerWrap > #apple{
-    width: 150px; height: 40px; 
-    border:1px solid#000 ;
-    border-radius: 10px;
-    text-indent: 20%;
-    background:
-    url(../images/appstore.svg) no-repeat #e5e3e1;
-    z-index: 999;
+#apple{ 
+        width: 120px; height: 40px; 
+        border-radius: 10px;
+        text-indent: 28%;
+        background:
+        url(../images/appstore.svg) no-repeat 7px #e4e1e199;
+        font-size: 12px;
+        font-weight: 1000;    
+        line-height: 40px;
     }
 
-#footerInfo{ height: 80px;
-    border-top: 1px solid#000;
-    display:flex;}
-#sns{display: flex;}
+#footerInfo{ 
+    color:#a3a0a0;
+    border-top: 1px solid#f7eeee;
+    display: flex;
+    padding-top: 30px;
+    padding-left: 100px;
+}
+#footerInfo .info{
+  
+    display:flex;   
+    
+}
+.info > li {
+    color:#a3a0a0;
+    margin:0 15px;
+    font-size: 12px;
+}
+.info > li a{color:#a3a0a0;}
+#lag{position:absolute;
+right:350px;
+font-size: 12px;}
+#sns{display: flex;
+    position: absolute;
+    right:150px;
+   
+}
+#ins{ 
+    background: url(../images/ins.png) no-repeat 40px;
+    color:rgba(255, 255, 255, 0)
+}
+    
+#twitt{background: url(../images/twitt.png) no-repeat ;
+    color:rgba(255, 255, 255, 0)
+}
+#you{background: url(../images/you.png) no-repeat;
+    color:rgba(255, 255, 255, 0)
+}
+#tic{background: url(../images/tic.png) no-repeat;
+    color:rgba(255, 255, 255, 0)
+}
+
 #App{display: none;}
+
+
+
+/* 사이드 메뉴 */
+/* 클릭버튼 div*/
+#sidebutton{display: none; 
+    position: absolute; top:32px; left:20px;
+    width: 20px; height: 20px;
+    border-top: 2px solid #fff;
+    border-bottom:2px solid#fff;
+}
+#sidebutton::after{content: "";
+            position: absolute; top: 7px;
+            width: 20px;
+            border-bottom: 2px solid#fff;                               
+} 
+
+/* ---------1200반응형 */
+/* @media screen and (max-width: 1200px){
+    main {width: 100%;}
+    #footerList{transform: translateX(-12%);}
+    #footerInfo{transform: translateX(-8%);}
+    #lag{right:140px; padding-right: 15px;}
+    #sns{right:15px;}
+    #logo{left:70px;}
+    #gnb{display: none;}
+    #sidebutton{display: block;}
+   
+
+} */
