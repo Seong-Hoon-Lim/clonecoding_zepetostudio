@@ -49,6 +49,7 @@ justify-content: space-evenly;
 #headerWrap:hover::after.sub >li >a{background: #fff;}
 .sub {
 display: none;  
+margin-top: 5px;
 width: 250px; 
 background: #fff;
 border-radius:20px;
@@ -77,7 +78,7 @@ z-index: 999;
 
 
 #gnbList > li:hover ul{color:#fff; display: block;}
-#gnbList > li:hover ul a:hover{color:#3c1bb4;}
+#gnbList > li:hover ul a:hover{color:#550dfd;}
 
 /* 푸터 */
 #footerList{ 
@@ -183,7 +184,7 @@ font-size: 12px;}
 } 
 
 /* ---------1200반응형 */
-/* @media screen and (max-width: 1200px){
+@media screen and (max-width: 1200px){
     main {width: 100%;}
     #footerList{transform: translateX(-12%);}
     #footerInfo{transform: translateX(-8%);}
@@ -194,4 +195,4 @@ font-size: 12px;}
     #sidebutton{display: block;}
    
 
-} */
+}

@@ -79,6 +79,7 @@
     width: 100%; height: 100vh;      
     display: flex;
     justify-content: center;
+    align-content: center;
     overflow: hidden;
     position: relative;    
  }
@@ -86,7 +87,7 @@
 {
     font-size: 60px;
     line-height: 70px;
-    font-weight: bold;
+    font-weight: bold;    
 }
 #image2 .content-info
 {
@@ -98,23 +99,29 @@
 
 #image2Text 
 {
-    padding: 120px 50px;  
+    padding: 100px 50px;
+    justify-content: center;  
 }
 
 #image2 #charName
-{ 
-    
+{     
     width: 100%;
-    margin-top: 500px;     
+    margin-top: 350px;     
     position: absolute;
-    display: flex; flex-direction: column;
-         
+    display: flex; flex-direction: column;     
     
+ }
+
+ #image2 #charName li 
+ { display: flex;
+    justify-content: center;
+    align-items: center;
  }
 .charProfile
 { 
-    position: relative; display: inline-block;
-    width: 320px; height: 420px;
+    position: relative; 
+    display: inline-block;
+    width: 320px; height: 320px;
     margin-left: 35px;
     /* border: 1px solid #000; */
 
