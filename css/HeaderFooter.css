@@ -1,6 +1,8 @@
 @charset "utf-8"; 
 /* 헤더 */
-#headerWrap{ 
+#headerWrap{
+    width: 100%;
+    position: relative;    
     background: #000; 
     height: 80px;
     display:flex; 
@@ -136,6 +138,7 @@ z-index: 999;
     display:flex;   
     
 }
+
 .info > li {
     color:#a3a0a0;
     margin:0 15px;
@@ -171,8 +174,9 @@ font-size: 12px;}
 
 /* 사이드 메뉴 */
 /* 클릭버튼 div*/
-#sidebutton{display: none; 
-    position: absolute; top:32px; left:20px;
+#mobileGnb { width: 100%;  }
+#sidebutton{
+    position: absolute;
     width: 20px; height: 20px;
     border-top: 2px solid #fff;
     border-bottom:2px solid#fff;
@@ -180,19 +184,53 @@ font-size: 12px;}
 #sidebutton::after{content: "";
             position: absolute; top: 7px;
             width: 20px;
+     
             border-bottom: 2px solid#fff;                               
 } 
+@media screen and (min-width: 1201px){
+#sidebutton {display: none;  top:32px; }
+}
 
 /* ---------1200반응형 */
 @media screen and (max-width: 1200px){
-    main {width: 100%;}
-    #footerList{transform: translateX(-12%);}
-    #footerInfo{transform: translateX(-8%);}
+    main{width: 100%;}
+    #footerList{transform: translateX(-80px);}
+    #footerInfo{transform: translateX(-80px); }
+
+        /* position: relative;} */
     #lag{right:140px; padding-right: 15px;}
     #sns{right:15px;}
     #logo{left:70px;}
     #gnb{display: none;}
-    #sidebutton{display: block;}
+    #sidebutton{display:inline-block;}
+    .info{transform: translateX(-240px) translateY(30px);}}
+    #storemenu{transform: translateX(70px);}
+    #sns{right: 50px;}
    
 
+/* 767반응형 */
+@media screen and (max-width:768px){
+    #headerWrap{height: 60px; width: 100vw;}
+    #logo{top:20px; left: 3px; scale:80% }
+    #sidebutton{ position: absolute; right: 0; top: 20px; display: block; }
+    /* #sidebutton{ display: block; position: absolute; top:20px;
+         right: 200px;} */
+    #lnbList .noti{transform: translateX(-20px);}
+    #lnbList .con{display: none;}
+    #storemenu{transform: translateX(90px);}
+    #footer{width: 100vw;}
+    #footerList{transform: translateX(-80px);}
+    #footerList > ul > li{margin-right: 15px;}   
+    #lag{margin-right: 15px;} 
+    .info >li{margin-right:15px;}   
 }
+/* 732반응형 */
+@media screen and (max-width:732px){
+    #storemenu{
+     flex-direction: column; 
+     /* transform: translateX(600px); */
+     left:300px;
+    }
+    #apple{margin-top: 15px;}
+}
+ 

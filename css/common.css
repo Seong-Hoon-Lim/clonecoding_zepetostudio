@@ -26,3 +26,13 @@ address { font-style: normal; }
 .content-title { font-size: 56px; font-weight: bold; 
                 line-height: 70px; }
 .content-info { font-size: 22px; }
+
+
+@media screen and (max-width:768px)
+{
+    body { width: 100%; }
+    video, img { width: 100%; }
+    .content-title { font-size: 5vw; }
+    .content-info { font-size: 3vw; }
+
+}

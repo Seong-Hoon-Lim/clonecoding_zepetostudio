@@ -6,10 +6,13 @@
         background-color: #f8f8fa;
             }
             
-        #video2 h2{font-size:56px ; 
+        #video2 h2{
+            /* font-size:56px ;  */
                     position: relative; top: 50px;  text-align: center; width: 100%;
                     background-color: #f8f8fa;}
-        #video2 p{ font-size: 22px; position: relative; top: 75px; text-align: center; width: 100%;background-color: #f8f8fa;}
+        #video2 p{ 
+            /* font-size: 22px;  */
+            position: relative; top: 75px; text-align: center; width: 100%;background-color: #f8f8fa;}
         #video2 div{max-width: 1128px; margin: 0 auto;}
         video { width: 100%; height: 80vh; position:relative ; margin-top: 80px; -webkit-mask-image: -webkit-radial-gradient(white, black);}
         #video2::before { content: ""; position: absolute; top: 0; left: 0;
@@ -19,8 +22,12 @@
     /* section6 */
      #zepetoJoin{ width: 100%; height: 100vh; margin: 0 auto; overflow: hidden; padding-bottom: 200px; 
                 text-align: center;}
-     #zepetoJoin h2{font-size: 56px; padding-top: 100px; text-align: center;}
-     #zepetoJoin p{font-size: 22px; padding-top: 10px; 
+     #zepetoJoin h2{
+        /* font-size: 56px;  */
+        padding-top: 100px; text-align: center;}
+     #zepetoJoin p{
+        /* font-size: 22px;  */
+        padding-top: 10px; 
                 text-align: center; }
      #zepetoJoin a{ display: inline-block; font-size :20px; color: #fff;  font-weight: 500;
                     background: #5c46ff; padding:0 34px; 
