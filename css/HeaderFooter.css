@@ -188,8 +188,11 @@ font-size: 12px;}
             border-bottom: 2px solid#fff;                               
 } 
 @media screen and (min-width: 1201px){
-#sidebutton {display: none;  top:32px; }
+#sidebutton {display: none;  top:32px; left: 0; }
 }
+@media screen and (max-width: 1200px) and (min-width:769px) {
+    #sidebutton { left: 20px; }
+    }
 
 /* ---------1200반응형 */
 @media screen and (max-width: 1200px){
@@ -202,8 +205,9 @@ font-size: 12px;}
     #sns{right:15px;}
     #logo{left:70px;}
     #gnb{display: none;}
-    #sidebutton{display:inline-block;}
-    .info{transform: translateX(-240px) translateY(30px);}}
+    #sidebutton{display:block; position: absolute; top: 30px;}
+    .info{transform: translateX(-240px) translateY(30px);}
+}
     #storemenu{transform: translateX(70px);}
     #sns{right: 50px;}
    
@@ -212,7 +216,7 @@ font-size: 12px;}
 @media screen and (max-width:768px){
     #headerWrap{height: 60px; width: 100vw;}
     #logo{top:20px; left: 3px; scale:80% }
-    #sidebutton{ position: absolute; right: 0; top: 20px; display: block; }
+    #sidebutton{ position: absolute; right: 25px; top: 20px; display: block; }
     /* #sidebutton{ display: block; position: absolute; top:20px;
          right: 200px;} */
     #lnbList .noti{transform: translateX(-20px);}
@@ -229,7 +233,7 @@ font-size: 12px;}
     #storemenu{
      flex-direction: column; 
      /* transform: translateX(600px); */
-     left:300px;
+     /* left:300px; */
     }
     #apple{margin-top: 15px;}
 }
