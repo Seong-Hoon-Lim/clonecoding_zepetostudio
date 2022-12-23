@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 /* 초기화 */
-*
+*:not(#slogan a)
 { box-sizing: border-box; }
 body, h1, h2, h3, p, ul, ol, dl, div { margin: 0; padding: 0; }
 body 
@@ -37,4 +37,8 @@ address { font-style: normal; }
     .content-title { font-size: 5vw; }
     .content-info { font-size: 3vw; }
 
+}
+@media screen and (max-width:601px)
+{ 
+    
 }

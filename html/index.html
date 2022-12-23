@@ -15,7 +15,14 @@
     <link rel="stylesheet" href="../css/section3,4.css">
     <!-- section 5,6 -->
     <link rel="stylesheet" href="../css/section5,6.css">
-    
+
+    <!-- JavaScript -->
+    <script src="../js/jquery-3.6.2.min.js"></script>
+    <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/HeaderFooter.js" defer></script>
+    <script src="../js/section3,4.js"defer></script>
 </head>
 <body>
     <header id="headerWrap">
@@ -49,32 +56,32 @@
                     <li><a href="#">지원</a></li>
                 </ul>
             </nav>
+            <div id="sidebutton"></div>
             <nav id="mobileGnb">
-                <div id="sidebutton"></div>
                 <h2 class="hidden">모바일 메뉴</h2>
                 <ul class="sidemenu">
-                    <li><a href="#">콘텐츠</a>
-                        <ul>
+                    <li class="sidemenuList"><a href="#">콘텐츠</a>
+                        <ul class="sidemenuSnb">
                             <li><a href="#">아이템</a></li>
                             <li><a href="#">월드</a></li>
                             <li><a href="#">라이브</a></li>
                             <li><a href="#">빌드잇</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">크리에이터 프로그램</a></li>
-                    <li><a href="#">비지니스</a></li>
-                    <li><a href="#">가이드</a>
-                        <ul>
+                    <li class="sidemenuList"><a href="#">크리에이터 프로그램</a></li>
+                    <li class="sidemenuList"><a href="#">비지니스</a></li>
+                    <li class="sidemenuList"><a href="#">가이드</a>
+                        <ul class="sidemenuSnb">
                             <li><a href="#">가이드</a></li>
                             <li><a href="#">학습</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">지원</a></li>
+                    <li class="sidemenuList"><a href="#">지원</a></li>
                 </ul>
-                <dl>
+                <dl id="sidemenuLag">
                   <dt>언어선택</dt>
                   <dd>
-                    <ul>
+                    <ul class="sidemenuLagList">
                       <li><a href="#">English</a></li>
                       <li><a href="#">한국어</a></li>
                       <li><a href="#">日本語</a></li>
@@ -169,18 +176,18 @@
         </section>
         <section id="image2">
             <div id="image2Text">
-            <h2 class="content-title">3 억 명을 사로잡을<br>
+            <h2 class="content-title">3억명을 사로잡을<br>
                     크리에이터가 될 기회.</h2>
             <p class="content-info">230만이 넘는 제페토 크리에이터가 전 세계 3억 유저에게 아이디어를 선보이고 있습니다.<br>
                     제페토의 대표 크리에이터를 바로 만나보세요.
             </p>
             </div>
             <ul id="charName">
-                <li>
+                <li id="charNameList">
                     <dl class="charProfile">
                         <dt>Lenge</dt>
                         <dd>@lenge</dd>
-                        <img src="../images/img_slider_01.png" alt="아바타 Lenge">
+                        <img class="charImg" src="../images/img_slider_01.png" alt="아바타 Lenge">
                     </dl>
                     <dl class="charProfile">
                         <dt>아티 ARTY</dt>

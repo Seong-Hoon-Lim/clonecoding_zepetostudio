@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-#video1 {width: 100%; height: 100%; overflow: hidden; margin: 0px auto; position: relative;}
-#video1 video { width: 100%; height: 100%;
-                margin-top: -5%; }
-#video1::before { content: ""; position: absolute; top: 0; left: 0;
+#video1 { overflow: hidden; width: 100%; height: 100%;  
+          margin: 0px auto; position: relative;}
+#video1 video { width: 100%; height: 100%; margin-top: -5%; }
+video::after { content: ""; position: absolute; top: 0; left: 0;
                   width: 100%; height: 100%;
                   background: rgba(0, 0, 0, 0.5);  }
 #slogan { position: absolute; top: 50%; width: 100%; }
@@ -14,78 +14,62 @@
              color: #ffffff; }
 #slogan a{text-decoration: none;
           font-weight: bolder;
-          font-size:1.4em; 
-          font-size: 1.8vw; 
+          /* font-size:1.4em;  */
+          font-size: 1.3vw; 
           color: #5C46FF;
           background: #ffffff; 
           padding:20px 20px 20px 20px; 
           display:inline-block;
-          border-radius: 40px; 
+          border-radius: 35px; 
           width:120px; 
           width: 8vw;
           margin:auto;
           display:block; 
           text-align: center;
         }
-#image1 { width: 100%; margin: 100px 0 100px 0; position: relative;
-           }
+#image1 { width: 100%; margin: 100px 0 100px 0; position: relative;}
 #image1Wrap img { width: 90%; margin-bottom: 30px; }
-#image1 h2{text-align: center; 
-  font-size: 60px; 
-  color: #292930;}
-#image1 p{margin: 20px 0 50px 0; text-align: center; font-size: 23px; color: #292930;}
+#image1 h2{text-align: center; font-size: 60px; color: #292930;}
+#image1 p{margin: 20px 0 50px 0; text-align: center; 
+          font-size: 23px; color: #292930;}
 
-#zepetoInfo{ margin: 0 100px; display: flex;
-             justify-content: space-evenly; text-align: center;
-            }
+#zepetoInfo{ margin: 0 100px; display: flex; 
+             justify-content: space-evenly; text-align: center;}
 #zepetoInfo dl { text-align: center; }
 #zepetoInfo dt{font-size: 15px; font-weight:lighter; color: #292930;}
-#zepetoInfo dd{margin-left: 5px;
-               font-size: 30px; font-weight:bold; }
+#zepetoInfo dd{margin-left: 5px; font-size: 30px; font-weight:bold; }
+
 
 
 @media screen and (max-width: 1024px) {
   #slogan { width: 100%; }
   #image1 { width: 100%; }
-  #zepetoInfo{display: flex; flex-direction: column; padding: 20px; line-height: 50px;} 
+  #zepetoInfo{display: flex; flex-direction: column; 
+              padding: 20px; line-height: 50px;} 
 }
 
 @media screen and (max-width: 767px) {
-    #slogan h2 { margin-top: -90px; margin-bottom: 20px; 
-    text-align: center; 
-    font-size: 5vw;
-    line-height: 1.2;
-     color: #ffffff; }
+    #slogan h2 { margin-top: -90px; 
+                 margin-bottom: 20px; 
+                 text-align: center; 
+                 font-size: 5vw;
+                 line-height: 1.2;
+                 color: #ffffff; }
 
-     #slogan a{text-decoration: none;
-      font-weight: bolder;
-      font-size: 1.8vw; 
-      color: #5C46FF;
-      background: #ffffff; 
-      padding:20px 20px 20px 20px; 
-      display:inline-block;
-      border-radius: 40px; 
-      line-height: 1vh;
-      width: 8vw;
-      margin:auto;
-      display:block; text-align: center; }
 
-      #image1 h2{text-align: center; 
-        font-size: 5vw; 
-        color: #292930;}
+    #image1 h2{text-align: center; 
+               font-size: 5vw; 
+               color: #292930;}
 
-        #image1 p{margin: 20px 0 50px 0; 
-          text-align: center; 
-          font-size: 2.5vw; 
-          color: #292930;}
+    #image1 p{margin: 20px 0 50px 0; 
+              text-align: center; 
+              font-size: 2.5vw; 
+              color: #292930;}
 
-          #zepetoInfo dt{
-            font-size: 2vw; 
-            text-align: center; 
-            font-weight:lighter; color: #292930;}
+    #zepetoInfo dt{font-size: 2vw; text-align: center; 
+                   font-weight:lighter; color: #292930;}
 
-        #zepetoInfo dd{
-          font-size: 3.3vw; 
-          text-align: center; font-weight:bold; }
+    #zepetoInfo dd{font-size: 3.3vw; text-align: center; 
+                   font-weight:bold; }
 
 }
