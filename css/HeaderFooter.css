@@ -211,28 +211,33 @@ z-index: 999;
                          background-image: url(../images/mobileGnb_Btn\ ic.svg);
     }
     #mobileGnb { position: absolute; left: 0; top: 0; 
-                width: 32%; height: 100vh; 
+                width: 30%; height: 100vh;
                 padding: 60px 0 0 30px;
                 text-align: left;
-                background: #fff; z-index: 999; }
-    #mobileGnb .sidemenu { position: relative; 
+                background: #fff; z-index: 10; }
+    #mobileGnb .sidemenu {
                             width: 100%; font-size: 20px; 
                             line-height: 40px; }
     #mobileGnb .sidemenu .sidemenuList 
     { position: relative; width: 100%; }
-    #mobileGnb .sidemenuList:nth-child(1) { width: 100%; 
-                                            overflow: visible; }
-    #mobileGnb .sidemenuList:nth-child(4) { width: 100%; 
-                                            overflow: visible; }
+    #mobileGnb .sidemenuList:nth-child(1) { width: 100%; }
+    #mobileGnb .sidemenuList:nth-child(4) { width: 100%; }
 
     #mobileGnb .sidemenuList:nth-child(5) { padding-bottom: 45px; }
     .sidemenuSnb > li 
     { display: none;
       position: relative; top: 0; left: 0; 
-      width: 100%; height: 40px; }
+      width: 100%; height: 40px;
+       }
     .sidemenuSnb
-    { padding-left: 30px; font-size: 16px; }
-    #sidemenuLag {  }
+    { padding-left: 30px; font-size: 16px; transition: 1s; }
+    #sidemenuLag { position: relative; width: 100%; font-size: 16px; }
+    #sidemenuLag dt { position: relative; line-height: 40px;
+                      display: block; width: 100%; color: #727272; }
+    #sidemenuLag li { display: none;
+        position: relative; top: 0; left: 0; 
+        width: 100%; height: 40px; }                 
+    .sidemenuLagList li a { font-size: 14px; line-height: 20px; }
     
 
 
@@ -257,7 +262,8 @@ z-index: 999;
    
 
 /* 767반응형 */
-@media screen and (max-width:768px){
+@media screen and (max-width:768px)
+{
     #headerWrap{height: 60px; width: 100vw;}
     #logo{top:20px; left: 3px; scale:80% }
     
@@ -275,7 +281,38 @@ z-index: 999;
     .info >li
     {
         margin-right:15px;
-    }   
+    }     
+    /* 모바일 gnb
+#mobileGnb::before { content: ""; position: absolute; top: 20px; right: 20px;
+        width: 28px; height: 28px;
+        background-size: 28px 28px;
+        background-image: url(../images/mobileGnb_Btn\ ic.svg);
+}
+#mobileGnb { position: absolute; right: 0; top: 0; 
+width: 100%; height: 100vh; 
+padding: 60px 0 0 30px;
+text-align: left;
+background: #fff; z-index: 999; }
+#mobileGnb .sidemenu { position: relative; 
+           width: 100%; font-size: 20px; 
+           line-height: 40px; }
+#mobileGnb .sidemenu .sidemenuList 
+{ position: relative; width: 100%; }
+#mobileGnb .sidemenuList:nth-child(1) { width: 100%; 
+                           overflow: visible; }
+#mobileGnb .sidemenuList:nth-child(4) { width: 100%; 
+                           overflow: visible; }
+
+#mobileGnb .sidemenuList:nth-child(5) { padding-bottom: 45px; }
+.sidemenuSnb > li 
+{ display: none;
+position: relative; top: 0; left: 0; 
+width: 100%; height: 40px;
+}
+.sidemenuSnb
+{ padding-left: 30px; font-size: 16px; transition: 1s; }
+#sidemenuLag {  } */
+
 }
 /* 732반응형 */
 @media screen and (max-width:732px){
