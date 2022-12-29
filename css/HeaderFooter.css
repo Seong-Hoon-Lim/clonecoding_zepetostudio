@@ -92,6 +92,7 @@ z-index: 999;
 
 /* 푸터 */
 #footerList{ 
+    position: relative;
     height:200px;
     border-top:1px solid #f7eeee;
     }
@@ -135,6 +136,7 @@ z-index: 999;
     }
 
 #footerInfo{ 
+    position: relative;
     color:#a3a0a0;
     border-top: 1px solid#f7eeee;
     display: flex;
@@ -142,7 +144,7 @@ z-index: 999;
     padding-left: 100px;
 }
 #footerInfo .info{
-  
+    
     display:flex;   
     
 }
@@ -154,10 +156,13 @@ z-index: 999;
 }
 .info > li a {color:#a3a0a0;}
 #lag{position:absolute;
-    right:400px;
-    height: 15px; overflow: hidden;
-    font-size: 12px;}
-#lag li a { color:#a3a0a0; }
+     right:400px;
+     z-index: 1500;
+     height: 25px; overflow: hidden;
+     background: #fff;
+     transition: 0.5s;
+     font-size: 12px;}
+#lag li a { color:#a3a0a0; font-weight: bold; }
 #sns{display: flex;
     position: absolute;
     right:150px;
@@ -205,11 +210,20 @@ z-index: 999;
 @media screen and (max-width: 1200px) and (min-width:769px) {
     #sidebutton { left: 20px; }
     /* 모바일 gnb */
-    #mobileGnb::before { content: ""; position: absolute; top: 20px; left: 20px;
+    /* #mobileGnb::before { content: ""; position: absolute; top: 20px; left: 20px;
                          width: 28px; height: 28px;
                          background-size: 28px 28px;
                          background-image: url(../images/mobileGnb_Btn\ ic.svg);
-    }
+    } */
+    #mobileGnbClose { position: absolute; top: 20px; left: 20px;
+        z-index: 1000; width: 28px; height: 28px; text-indent: -5000px;
+         }
+    #mobileGnbClose a { position: absolute; top: 8px; left: 8px;
+        z-index: 1000; display: inline-block;
+        width: 28px; height: 28px;
+        background-size: 28px 28px;
+        background-image: url(../images/mobileGnb_Btn\ ic.svg); }
+    
     #mobileGnb { position: absolute; left: 0; top: 0; 
                 width: 30%; height: 100vh;
                 padding: 60px 0 0 30px;
@@ -236,8 +250,8 @@ z-index: 999;
                       display: block; width: 100%; color: #727272; }
     #sidemenuLag li { display: none;
         position: relative; top: 0; left: 0; 
-        width: 100%; height: 40px; }                 
-    .sidemenuLagList li a { font-size: 14px; line-height: 20px; }
+        width: 100%; }                 
+    .sidemenuLagList > li > a { font-size: 14px; line-height: 10px; }
     
 
 
@@ -326,12 +340,13 @@ width: 100%; height: 40px;
 }
 /* 600반응형 */
 @media screen and (max-width:600px){
-    #footerWrap{height: 500px;}
+    #footerWrap{ position: relative; left: 0; bottom: 100px;
+                 height: 500px; }
     #footerList{flex-direction: column;
     border-top:none ;}
     #footerList .fsub{display: none;}
     #footerList ul{flex-flow: column;
-    position: absolute;
+    position: relative;
     left:56px;
 }
     #footerList ul li{
@@ -342,13 +357,27 @@ width: 100%; height: 40px;
        border-bottom: 1px solid#e3e1e1;
        text-indent: 5%;
     }
-    #footerInfo{border-top:none;}
-    #footerInfo .info{flex-flow: column;}
+    #footerList ul .footerSnb { display: none; }
+
+    #footerInfo {border-top:none; 
+                 position: relative; margin-top: 160px;
+                 display: flex; flex-flow: row wrap;
+                 justify-content: center;
+                 align-content: space-around;
+                
+                }
+    #footerInfo .info{  flex-flow: column; 
+                        position: absolute; right: -20%; bottom: -70px;
+                     }
     #storemenu{display: none;}
     #footerInfo small{
         position: absolute;
-        bottom:0;}
-    #sns{ bottom:0;}
+        left: 43%;
+        bottom: -150px;}
+    #footerInfo #lag { bottom: 0; }
+    #sns{ left: 45%; bottom: 100%;}
+    #lag ul { 
+              height: 25px; line-height: 25px; }
 
 }    
 

@@ -37,8 +37,15 @@
 #zepetoInfo{ margin: 0 100px; display: flex; 
              justify-content: space-evenly; text-align: center;}
 #zepetoInfo dl { text-align: center; }
-#zepetoInfo dt{font-size: 15px; font-weight:lighter; color: #292930;}
-#zepetoInfo dd{margin-left: 5px; font-size: 30px; font-weight:bold; }
+#zepetoInfo dt{display: block;
+               font-size: 15px;
+               font-weight:lighter; 
+               color: #292930;}
+#zepetoInfo dd{display: block;
+               margin-top: 4px;
+               margin-left: 5px; 
+               font-size: 30px;
+               font-weight:bold; }
 
 
 

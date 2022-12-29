@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZEPETO Studio</title>
+    <link rel="stylesheet" href=""https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"">
     <!-- 초기화 -->
     <link rel="stylesheet" href="../css/common.css">
     <!-- header/footer -->
@@ -21,8 +22,7 @@
     <script src="../js/jquery-migrate-1.4.1.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>
     <script src="../js/slick.min.js"></script>
-    <script src="../js/HeaderFooter.js" defer></script>
-    <script src="../js/section3,4.js"defer></script>
+    <script src="../js/common.js" defer></script>
 </head>
 <body>
     <header id="headerWrap">
@@ -58,6 +58,7 @@
             </nav>
             <div id="sidebutton"></div>
             <nav id="mobileGnb">
+                <span id="mobileGnbClose"><a href="#">닫기</a></span>
                 <h2 class="hidden">모바일 메뉴</h2>
                 <ul class="sidemenu">
                     <li class="sidemenuList"><a href="#">콘텐츠</a>
@@ -266,13 +267,13 @@
         <div id="footerList">
             <ul>
                 <li><strong>제품</strong>
-                    <ul>
+                    <ul class="footerSnb">
                         <li><a href="#">ZEPETO</a></li>
                         <li><a href="#">ZEPETO Studio</a></li>
                     </ul>
                 </li>
                 <li><a href="#"><strong>NAVER Z</strong></a>
-                    <ul>
+                    <ul class="footerSnb">
                         <li><a href="#">뉴스</a></li>
                         <li><a href="#">한국 채용</a></li>
                         <li><a href="#">미국 채용</a></li>
@@ -281,7 +282,7 @@
 
                 </li>
                 <li><a href="#"><strong>지원</strong></a>
-                    <ul>
+                    <ul class="footerSnb">
                         <li><a href="#">공지</a></li>
                         <li><a href="#">결제</a></li>
                         <li><a href="#">계정-안전</a></li>
@@ -289,7 +290,7 @@
                     </ul>
                 </li>
                 <li><a href="#"><strong>커뮤니티</strong></a>
-                    <ul>
+                    <ul class="footerSnb">
                         <li><a href="#">안전센터</a></li>
                         <li><a href="#">가이드라인</a></li>
                     </ul>
